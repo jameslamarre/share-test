@@ -1,6 +1,4 @@
 
-application: nyc-share-test
-version: dev
 
 runtime: nodejs
 api_version: 1
