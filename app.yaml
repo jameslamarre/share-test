@@ -1,3 +1,9 @@
 # [START app_yaml]
+
+application: nyc-share-test
+
 runtime: nodejs
 env: flex
+version: 0.9
+api_version: 1
+threadsafe: true
