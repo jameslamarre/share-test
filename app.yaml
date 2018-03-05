@@ -1,9 +1,23 @@
-# [START app_yaml]
 
 application: nyc-share-test
+version: dev
 
 runtime: nodejs
-env: flex
-version: 0.9
 api_version: 1
 threadsafe: true
+
+handlers:
+- url: /
+  static_files: public/index.html
+  upload: public/index.html
+
+- url: /(.*)
+  static_files: public/\1
+  upload: public/(.*)
+
+skip_files:
+  - ^README\.md$
+  - ^node_modules/*
+  - ^src/*
+  - ^package\.json$
+  - ^webpack\.config\.js$
