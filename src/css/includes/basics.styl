@@ -1,0 +1,149 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-height: $site-min-height;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: Arial,Tahoma,sans-serif;
+	background: $footerColor;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: $site-sml-min-width;
+}
+
+.everything-but-the-footer {
+	background: $bgColor;
+	padding: 100px 0px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+ol {
+  list-style-type: none;
+}
+
+ul,li {
+  list-style: none;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.btn, a {
+  cursor: pointer;
+  border: none;
+  // no underline.
+  text-decoration: none;
+}
+
+.btn,
+.button {
+  width: auto;
+  display: block;
+  text-align: center;
+  font-family: sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+
+  }
+}
+
+.icon,
+.img {
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+#root,
+section {
+	// padding: 20px 0px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.content-wrapper {
+	// padding: 100px 0px;
+	position: relative;
+  width: 80%;
+	max-width: $site-max-width;
+	margin: auto;
+
+	// &:first-child {
+	// 	padding: 100px 0px 50px;
+	// }
+
+	h1, h2, h3{
+		transition: all $time-reveal $sine-ease-in;
+		opacity: 1;
+		transform: translate3d(0px, 0px, 0px);
+	}
+
+	a, ul, p, span, input, form, button, div {
+		transition: all $time-reveal $sine-ease-in;
+		transition-delay: $time-reveal-delay;
+		transform: translate3d(0px, 0px, 0px);
+		opacity: 1;
+	}
+
+	&.hide {
+		h1, h2, h3,
+		a, ul, p, span, input, form, button, div {
+			opacity: 0;
+			transform: translate3d(0px, 5px, 0px);
+		}
+	}
+}
+
+section {
+	h1 {
+		color: #333;
+	}
+	h2 {
+		text-align: left;
+	}
+
+	p {
+		color: #666;
+		text-align: left;
+		&.hide {
+			display: none;
+		}
+	}
+
+	p, ul {
+		padding: 10px 0px;
+	}
+
+	a.cta {
+		color: $niceBlue;
+		text-decoration: underline;
+		&:hover {
+			opacity: 0.75;
+		}
+	}
+}
